@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latex table generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <main class="w-screen h-screen bg-gray-50 dark:bg-gray-700 flex flex-row gap-4 overflow-hidden">
+    <section class="w-full">
+      <div class="h-[94%] w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+        <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800 h-full">
+            <label for="input-textarea" class="sr-only">Your data</label>
+            <textarea id="input-textarea" rows="4" class="h-full w-full p-4 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write your data..." required></textarea>
+        </div>
+        <div class="flex items-center justify-end px-3 py-2 border-t dark:border-gray-600">
+            <button id="generate-button" class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
+                Generate
+            </button>
+        </div>
+      </div>
+    </section>
+    <section class="w-full">
+      <div class="h-[94%] w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+        <div class="h-full px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+            <label for="output-textarea" class="sr-only">Table goes gere</label>
+            <textarea id="output-textarea" rows="4" class="h-full w-full p-4 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Table goes gere" disabled></textarea>
+        </div>
+        <div class="flex items-center justify-end px-3 py-2 border-t dark:border-gray-600">
+          <button id="copy-button" class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+              Copy
+          </button>
+      </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="main.js"></script>
+</html>
